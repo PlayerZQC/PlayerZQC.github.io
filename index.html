@@ -39,6 +39,20 @@
         opacity: 0;
       }
     }
+    .moving-image {
+      position: absolute;
+      top: 0;
+      right: 0;
+      animation: move 10s linear infinite;
+    }
+    @keyframes move {
+      0% {
+        right: 0;
+      }
+      100% {
+        right: 100%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -51,6 +65,7 @@
     <li><a href = "https://www.bilibili.com/anime/?spm_id_from=333.1007.0.0">Watch animes</a></li>
   </ul>
   <div class="rain"></div>
+  <img class="moving-image" src="https://img1.picmix.com/output/stamp/normal/7/0/3/7/1307307_b6fc1.gif">
   <script>
     const rain = document.querySelector('.rain');
     for (let i = 0; i < 100; i++) {
